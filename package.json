@@ -1,0 +1,23 @@
+{
+  "name": "electronmd",
+  "version": "0.1.0",
+  "main": "public/main.js",
+  "private": true,
+  "dependencies": {
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron-start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^1.8.4",
+    "eslint": "^4.19.1",
+    "prettier-eslint": "^8.8.1"
+  }
+}
