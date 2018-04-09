@@ -1,0 +1,10 @@
+version: 0.1.0
+files:
+  - url: electronmd-0.1.0-mac.zip
+    sha512: IFQXGJUHMQtVDoLu1cIWfOYvxDpjEDVy4GkRvMJAaPSNy5i2B3NbQ/V8vmZ6KvXdy40hZt0VJ5Mt24elrzEerw==
+  - url: electronmd-0.1.0.dmg
+    sha512: aYqUFHF5KYyqlKA3UvzyBwafWkdOpBTVKiSYQpw/b8sLGaYJ3DWHzzlaNvPn19e46DhXgW3n5SbJoPo0FJvIFQ==
+    size: 67088800
+path: electronmd-0.1.0-mac.zip
+sha512: IFQXGJUHMQtVDoLu1cIWfOYvxDpjEDVy4GkRvMJAaPSNy5i2B3NbQ/V8vmZ6KvXdy40hZt0VJ5Mt24elrzEerw==
+releaseDate: '2018-04-08T01:17:51.917Z'

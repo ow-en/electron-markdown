@@ -2,8 +2,11 @@
   "name": "electronmd",
   "version": "0.1.0",
   "main": "public/main.js",
+  "author": "owen",
+  "homepage": "./",
   "private": true,
   "dependencies": {
+    "electron-is-dev": "^0.3.0",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-scripts": "1.1.4"
@@ -13,11 +16,27 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "electron-start": "electron ."
+    "electron-start": "electron .",
+    "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-pack": "build - em.main=build/main.js",
+    "preelectron-pack": "yarn build"
   },
   "devDependencies": {
+    "concurrently": "^3.5.1",
     "electron": "^1.8.4",
+    "electron-builder": "^20.8.1",
     "eslint": "^4.19.1",
-    "prettier-eslint": "^8.8.1"
+    "prettier-eslint": "^8.8.1",
+    "wait-on": "^2.1.0"
+  },
+  "build": {
+    "appId": "com.electronmd",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
   }
 }
