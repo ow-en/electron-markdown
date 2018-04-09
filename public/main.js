@@ -1,4 +1,5 @@
-const {app} = require('electron');
+const electron = require('electron');
+const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 
 const path = require('path');
@@ -12,8 +13,8 @@ function createWindow() {
     mainWindow.loadURL(isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`);
 
     app.setAboutPanelOptions({
-      applicationName: “electronmd”,
-      applicationVersion: “0.0.1”,
+      applicationName: 'electronmd',
+      applicationVersion: '0.0.1',
     })
 
     mainWindow.on('closed', () => mainWindow = null);
@@ -32,3 +33,5 @@ app.on('window-all-closed', () => {
       createWindow();
     }
   });
+
+  
