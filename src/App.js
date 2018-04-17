@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import SplitPane from 'react-split-pane';
 import Editor from './editor.js';
+import ReactMarkdown from 'react-markdown';
 
 class App extends Component {
   constructor(props) {
@@ -11,6 +12,14 @@ class App extends Component {
     this.state = {
       markdownSrc: "# Hello World",
     }
+
+    this.onMarkdownChange = this.onMarkdownChange.bind(this);
+  }
+
+  onMarkdownChange(md) {
+    this.setState({
+      markdownSrc: md
+    });
   }
   render() {
     return (
@@ -18,9 +27,12 @@ class App extends Component {
         <SplitPane split="vertical" defaultSize="50%">
           <div className="editor-pane">
             <Editor className="editor" value=
-            {this.state.markdownSrc}/>
+            {this.state.markdownSrc}
+            onChange={this.onMarkdownChange}/>
           </div>
           <div className="view-pane">
+            <ReactMarkdown className="result" source=
+            {this.state.markdownSrc} />
           </div>
         </SplitPane>
       </div>
